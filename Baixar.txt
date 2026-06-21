@@ -1,0 +1,232 @@
+O **Apache NetBeans** é uma ótima escolha para começar em Java porque ele já cria projetos, compila e executa tudo para você.
+
+## 1. Instalar o Java (JDK)
+
+Primeiro instale o JDK 21:
+
+[Eclipse Temurin JDK 21](https://adoptium.net/temurin/releases/?utm_source=chatgpt.com)
+
+Escolha:
+
+* Windows
+* x64
+* JDK 21 (LTS)
+
+Instale normalmente clicando em "Next" até finalizar.
+
+### Verificar instalação
+
+Abra o PowerShell:
+
+```powershell
+java -version
+javac -version
+```
+
+Deve aparecer algo parecido com:
+
+```text
+openjdk version "21.0.x"
+javac 21.0.x
+```
+
+---
+
+## 2. Baixar o NetBeans
+
+Acesse:
+
+[Apache NetBeans Downloads](https://netbeans.apache.org/download/index.html?utm_source=chatgpt.com)
+
+Baixe a versão mais recente para Windows.
+
+---
+
+## 3. Instalar o NetBeans
+
+Execute o instalador.
+
+O NetBeans normalmente detecta o JDK sozinho.
+
+Se pedir o caminho do Java, geralmente será algo parecido com:
+
+```text
+C:\Program Files\Eclipse Adoptium\jdk-21
+```
+
+---
+
+## 4. Criar seu primeiro projeto
+
+Abra o NetBeans.
+
+Clique:
+
+```text
+File
+↓
+New Project
+```
+
+Escolha:
+
+```text
+Java with Ant
+↓
+Java Application
+```
+
+Clique em **Next**.
+
+---
+
+## 5. Configurar o projeto
+
+Nome:
+
+```text
+Calculadora
+```
+
+Marque:
+
+```text
+Create Main Class
+```
+
+Clique em **Finish**.
+
+---
+
+## 6. Entendendo a estrutura
+
+Você verá algo parecido com:
+
+```text
+Calculadora
+│
+├── Source Packages
+│   └── calculadora
+│       └── Calculadora.java
+│
+└── Libraries
+```
+
+---
+
+## 7. Escrevendo seu primeiro programa
+
+Substitua o conteúdo por:
+
+```java
+package calculadora;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+
+        System.out.println("Olá Mundo!");
+        System.out.println("Meu primeiro programa Java!");
+
+    }
+}
+```
+
+---
+
+## 8. Executar
+
+Clique no botão verde:
+
+▶ Run
+
+ou pressione:
+
+```text
+F6
+```
+
+Saída:
+
+```text
+Olá Mundo!
+Meu primeiro programa Java!
+```
+
+---
+
+## 9. Criar sua calculadora
+
+Depois disso, crie uma versão simples:
+
+```java
+package calculadora;
+
+import java.util.Scanner;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Primeiro número: ");
+        double a = teclado.nextDouble();
+
+        System.out.print("Segundo número: ");
+        double b = teclado.nextDouble();
+
+        double resultado = a + b;
+
+        System.out.println("Resultado: " + resultado);
+
+        teclado.close();
+    }
+}
+```
+
+---
+
+## 10. Salvar no GitHub
+
+Para sua meta de 1 commit por dia:
+
+```text
+java-calculadora/
+├── src/
+├── README.md
+└── screenshots/
+```
+
+Faça commits pequenos:
+
+```bash
+git init
+git add .
+git commit -m "Projeto inicial calculadora Java"
+```
+
+Depois:
+
+```bash
+git commit -m "Adicionada operação de soma"
+git commit -m "Adicionada operação de divisão"
+git commit -m "Tratamento de erro"
+```
+
+Assim você ganha vários commits enquanto aprende Java de forma organizada.
+
+### Ordem que eu seguiria no NetBeans
+
+1. Calculadora
+2. Conversor de moedas
+3. Pedra-Papel-Tesoura
+4. Sistema Bancário
+5. Biblioteca
+6. RPG de texto
+7. Agenda de contatos
+8. Controle financeiro
+9. JavaFX
+10. Banco de dados SQLite
+
+Essa sequência cobre praticamente tudo que você precisa para recuperar a base de Java e construir um GitHub forte.
